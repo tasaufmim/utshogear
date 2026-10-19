@@ -1,0 +1,32 @@
+{
+  "name": "utsho-gear",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UGR ERP / Inventory management system with POS (motorcycle accessories)",
+  "type": "module",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "mongo:start": "bash scripts/mongo-start.sh",
+    "mongo:rs-init": "node scripts/rs-init.mjs",
+    "mongo:verify-roles": "node scripts/verify-roles.mjs",
+    "seed": "node server/src/seed/seed.js",
+    "reconcile": "node scripts/reconcile-stock.mjs",
+    "audit:verify": "node scripts/audit-verify.mjs",
+    "backup": "node scripts/backup.mjs",
+    "restore": "node scripts/restore.mjs",
+    "test": "npm run test -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "mongodb": "^6.10.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

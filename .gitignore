@@ -1,0 +1,26 @@
+node_modules/
+dist/
+build/
+coverage/
+.env
+.env.local
+*.log
+npm-debug.log*
+
+# local database
+.mongo-data/
+*.archive
+backups/
+
+# uploads
+server/uploads/*
+!server/uploads/.gitkeep
+
+# editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# vite
+client/.vite/
