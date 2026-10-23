@@ -85,6 +85,19 @@ export function Receipt({
       >
         {/* header */}
         <div style={{ textAlign: 'center' }}>
+          <img
+            src="/logo.png"
+            alt=""
+            style={{
+              maxHeight: '12mm',
+              maxWidth: '88%',
+              objectFit: 'contain',
+              display: 'block',
+              margin: '0 auto 2px',
+              printColorAdjust: 'exact',
+              WebkitPrintColorAdjust: 'exact',
+            }}
+          />
           <div style={{ fontWeight: 800, fontSize: 15, letterSpacing: 0.4 }}>
             {shop.shopName || 'UTSHO GEAR'}
           </div>

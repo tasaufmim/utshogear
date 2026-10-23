@@ -59,8 +59,10 @@ export function LoginPage() {
   return (
     <div className="login-wrap">
       <div className="login-card">
-        <div className="login-logo">UGR</div>
-        <h1>UTSHO GEAR</h1>
+        <div className="login-brand">
+          <img src="/logo.png" alt="" />
+          <h1 className="sr-only">Utsho Gear — Motorcycle Accessories</h1>
+        </div>
         <p className="muted" style={{ marginTop: 4 }}>
           {step === 'phone' ? 'Sign in to the counter' : `Continue as ${phone}`}
         </p>

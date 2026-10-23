@@ -68,11 +68,14 @@ button { font: inherit; }
   display: flex; align-items: center; gap: 10px;
 }
 .sidebar .brand .logo {
-  width: 34px; height: 34px; border-radius: 9px;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-  color: #fff; display: grid; place-items: center;
-  font-weight: 800; font-size: 13px; letter-spacing: 0.5px;
+  /* full-color brand logo on a white plate so navy/red stay true on the dark rail */
+  background: #fff;
+  border-radius: 10px;
+  padding: 6px 9px;
+  display: block;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
 }
+.sidebar .brand .logo img { display: block; width: 138px; height: auto; }
 .sidebar .brand b { color: #fff; font-size: 15px; display: block; }
 .sidebar .brand span { font-size: 11px; color: var(--text-3); }
 
@@ -205,6 +208,10 @@ table.tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 }
 .login-card { width: 100%; max-width: 380px; background: var(--surface); border-radius: 16px; padding: 28px; box-shadow: var(--shadow-lg); }
 .login-logo { width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 17px; margin-bottom: 14px; }
+/* full brand logo on the login card (idle lock keeps the .login-logo box above) */
+.login-brand { display: flex; justify-content: center; margin-bottom: 16px; }
+.login-brand img { width: 100%; max-width: 272px; height: auto; display: block; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 .keypad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .keypad button {

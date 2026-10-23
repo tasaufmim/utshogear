@@ -82,10 +82,8 @@ export function Layout() {
     <div className="shell">
       <aside className="sidebar">
         <div className="brand">
-          <div className="logo">UGR</div>
-          <div>
-            <b>UTSHO GEAR</b>
-            <span>POS & Inventory</span>
+          <div className="logo">
+            <img src="/logo.png" alt="Utsho Gear — Motorcycle Accessories" />
           </div>
         </div>
 

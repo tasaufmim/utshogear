@@ -284,6 +284,20 @@ export function BarcodePage() {
                       color: '#000',
                     }}
                   >
+                    {template !== '38x25' && (
+                      <img
+                        src="/logo.png"
+                        alt=""
+                        style={{
+                          maxHeight: geo.labelH <= 30 ? '5mm' : '6.5mm',
+                          maxWidth: '78%',
+                          objectFit: 'contain',
+                          marginBottom: '0.4mm',
+                          printColorAdjust: 'exact',
+                          WebkitPrintColorAdjust: 'exact',
+                        }}
+                      />
+                    )}
                     <div style={{ fontSize: 5.2, letterSpacing: 0.3, fontWeight: 700, textTransform: 'uppercase' }}>
                       {settings?.shopName ?? 'UTSHO GEAR'}
                     </div>
