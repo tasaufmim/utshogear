@@ -116,7 +116,7 @@ export function LoginPage() {
         )}
 
         <div className="hint center" style={{ marginTop: 18 }}>
-          Owner 01700000000 · Cashier 01800000000 (demo)
+          Traveling is Life
         </div>
       </div>
     </div>
